@@ -1,0 +1,19 @@
+  mount -o loop  /dev/sr0 /mnt/
+    3  mkdir /iso_dvs
+    4  cd /mnt/
+    6  ls
+    8  cp -avr * /iso_dvs
+    9  cd ..
+   10  cd /etc/yum.repos.d/
+   11  ls
+   13  mv redhat.repo /tmp/
+   14  ls
+   15  vim rhel8.repo
+      [BaseOS]
+      name=BaseOS
+      baseurl=
+        
+ 
+   18  yum clean all
+   19  yum list all
+
